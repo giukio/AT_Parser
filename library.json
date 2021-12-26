@@ -1,6 +1,6 @@
 {
     "name": "AT_Parser",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Parse Custom defined AT commands from a string and call a user-defined callback function",
     "keywords": "AT, commands, parser",
     "repository":
