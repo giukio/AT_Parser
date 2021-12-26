@@ -36,7 +36,7 @@
 #define AT_H
 
 #include <Arduino.h>
-
+#include <vector>
 
 /*!
  *  @brief  Class that stores a general AT Command
