@@ -1,0 +1,24 @@
+{
+    "name": "AT_Parser",
+    "version": "1.0.0",
+    "description": "Parse Custom defined AT commands from a string and call a user-defined callback function",
+    "keywords": "AT, commands, parser",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/giukio/AT_Parser.git"
+    },
+    "authors":
+    [
+      {
+        "name": "Giulio Berti",
+        "email": "giukio@gmail.com",
+        "maintainer": true
+      }
+    ],
+    "license": "BSD-3-Clause",
+    "homepage": "https://github.com/giukio/AT_Parser/blob/main/README.md",
+    "headers": "AtParser.h",
+    "frameworks": "arduino",
+    "platforms": "*"
+  }
