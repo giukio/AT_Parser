@@ -36,7 +36,7 @@
 
 AtParser::AtParser()
 {
-    AtParser::AddCommand(new AtCommand("version", [](std::vector<String> params){Serial.println("Version 1.0");}) );
+    AtParser::AddCommand(new AtCommand("version", [](std::vector<String> params){Serial.println("Version 1.0.5");}) );
 }
 
 AtParser::~AtParser()
@@ -80,7 +80,14 @@ int8_t AtParser::Parse(String command)
         {
             params = params.substring(paramIndex+1);
             paramIndex = params.indexOf(":");
-            String param = params.substring(0,paramIndex);
+            String param;
+            if (paramIndex < 0){
+                uint32_t idx = params.lastIndexOf("\r\n");
+                param = params.substring(0,idx);
+            }
+            else{
+                param = params.substring(0,paramIndex);
+            }
             paramsVec.push_back(param);
             // Serial.printf("Argument %d: %s\n", paramsVec.size(), param.c_str());
         }
